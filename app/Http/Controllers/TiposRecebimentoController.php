@@ -71,6 +71,8 @@ class TiposRecebimentoController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        TipoRecebimento::findOrFail($id)->delete();
+
+        return redirect('tipos-recebimento');
     }
 }
