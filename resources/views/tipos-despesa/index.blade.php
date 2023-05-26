@@ -4,7 +4,7 @@
 <h1 class='TitleDespesas'>Tipos de Despesa</h1>
 <div class="ContainerBtnDespesas"><a class="btn btn-primary  BtnTypeDespesa" href="/tipos-despesa/create" role="button">Novo</a></div>
 
-<a class="btn btn-primary" href="/tipos-despesa/create" role="button" alt="Novo" title="Novo"><span class="material-symbols-outlined">add</span></a>
+
 
 @if (count($tiposDespesa) > 0)
 <div class="ContainerMain">
@@ -22,12 +22,12 @@
                 <td>{{ $t->id }}</td>
                 <td>{{ $t->descricao }}</td>
                 <td class="BtnsRemoveEdit">
-                    <a class="btn btn-primary BtnEdit" 
+                    <a class="btn btn-primary BtnEdit " 
                         href="/tipos-despesa/{{ $t->id }}/edit" 
                         role="button">Editar</a>
-                    <a class="btn btn-primary BtnRemove" 
+                    <a class="btn btn-primary BtnRemove material-symbols-outlined" 
                         href="/tipos-despesa/{{ $t->id }}" 
-                        role="button" alt="Remover" title="Remover"><span class="material-symbols-outlined">delete</span></a>
+                        role="button" alt="Remover" title="Remover">delete</a>
                 </td>
             </tr>
             @endforeach
