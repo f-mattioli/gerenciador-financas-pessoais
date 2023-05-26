@@ -55,6 +55,16 @@ class UsuarioController extends Controller
         return view('usuarios/edit', compact('usuario'));
     }
 
+
+
+    public function destroy(string $id)
+    {
+        $usuario = $this->usuarioRepository->destroy($id);
+ 
+        return redirect('usuarios');
+    }
+
+    
     public function update(UsuarioRequest $usuarioRequest, string $id)
     {
         $validInputData = $usuarioRequest->validated();
@@ -71,9 +81,4 @@ class UsuarioController extends Controller
         return redirect()->route('usuarios/index')->with('message', 'Usuario atualizado com sucesso!');
     }
 
-    public function destroy(string $id)
-    {
-        $this->usuarioRepository->destroy($id);
-        return redirect()->route('usuarios/index')->with('message', 'Usuario deletado com sucesso!');
-    }
 }
