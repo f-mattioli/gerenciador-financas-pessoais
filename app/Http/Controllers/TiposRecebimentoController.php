@@ -55,7 +55,10 @@ class TiposRecebimentoController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $tipoRecebimento = TipoRecebimento::findOrFail($id);
+        return view('tipos-recebimento/edit', [
+            'tipoRecebimento' => $tipoRecebimento
+        ]);
     }
 
     /**

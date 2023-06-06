@@ -1,7 +1,7 @@
 @extends('templates.main')
 
 @section('content')
-<h1 class="TitleDespesas">Detalhes do Tipo de Recebimento</h1>
+<h1 class="TitleRecebimentos">Detalhes do Tipo de Recebimento</h1>
 <div class="ContainerMainRecebimentos">
 <form method="POST" action="/tipos-recebimento/{{ $tipoRecebimento->id }}" class="FormularioDelete">
     {{ csrf_field() }}
